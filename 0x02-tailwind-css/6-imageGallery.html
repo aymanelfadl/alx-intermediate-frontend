@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid and Flexbox Layout</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+            <style>
+        @media (max-width: 768px) {
+            main {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body class="p-4">
+    <header class="bg-blue-500 text-white p-4">
+        <h1 class="text-3xl">Grid and Flexbox Layout</h1>
+    </header>
+
+    <main class="grid grid-cols-1 lg:grid-cols-3 gap-4 mt-4 min-h-screen">
+        <section class="lg:col-span-2 flex">
+            <div class="bg-red-300 flex-1 p-4">Flexbox Item 1</div>
+            <div class="bg-red-400 flex-1 p-4">Flexbox Item 2</div>
+        </section>
+    
+        <aside class="bg-green-200 p-4">Sidebar</aside>
+
+        <section class="lg:col-span-3 flex flex-col w-full">
+            <h2 class="text-3xl font-bold m-4">Image Gallery</h2>
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-4">
+                <img src="https://i.pinimg.com/736x/83/92/93/839293ee2418a0e1964fa3191f055a4d.jpg" alt="Gallery Image 1" class="w-full h-full object-cover">
+                <img src="https://i.pinimg.com/736x/70/d2/62/70d262bd976d3f505819f4584facc5de.jpg" alt="Gallery Image 2" class="w-full h-full object-cover">
+                <img src="https://i.pinimg.com/736x/2e/41/79/2e417970ab8d98ff119411536a286f44.jpg" alt="Gallery Image 3" class="w-full h-full object-cover">
+                <img src="https://i.pinimg.com/736x/c0/c5/9c/c0c59cd7da8bd86629d83ea4381c7cd8.jpg" alt="Gallery Image 4" class="w-full h-full object-cover">
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-gray-800 text-white p-4 mt-4">
+        <p>&copy; 2024 John Doe's Blog</p>
+    </footer>
+</body>
+</html>
